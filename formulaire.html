@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="formulaire.css"/>
+    <script>
+        window.onload = function() {
+            alert('Vous pouvez exprimer vos avis ici...');
+        };
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Page1.html">Accueil</a></li>
+            <li><a href="LesCours.html">Département</a></li>
+            <li><a href="formulaire.html">Feedback</a></li>
+            <li><a href="mailto:rebaniaya997@gmail.com">Contact</a></li>
+        </ul>
+    </nav>
+
+    <form>
+        <fieldset>
+            <h2>Vos coordonnées</h2>
+            <table>
+                <tr>
+                    <td><label for="nom">Nom :</label></td>
+                    <td><input type="text" id="nom" name="nom" placeholder="Quel est votre nom ?" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td><label for="prenom">Prénom :</label></td>
+                    <td><input type="text" id="prenom" name="prenom" placeholder="Quel est votre prénom ?" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">Email :</label></td>
+                    <td><input type="email" id="mail" name="mail" placeholder="Écrivez votre email ici..." style="width: 100%;"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <p>
+            <label for="expression">Feedback :</label> <br>
+            <textarea id="expression" name="expression" rows="8" cols="50" placeholder="Comment trouvez-vous notre plateforme ?"></textarea>
+        </p>
+    </form>
+
+    <footer class="footer-box">
+        <p style="color: white;">Plateforme éducative pour vous</p>
+        <p style="color: white;">© Copyright 2024 - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        // Fonction pour créer des cookies
+        function createCookies() {
+            document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2026 23:59:59 UTC; path=/";
+            document.cookie = "language=fr; expires=Fri, 31 Dec 2026 23:59:59 UTC; path=/";
+            document.cookie = "isLoggedIn=true; expires=Fri, 31 Dec 2026 23:59:59 UTC; path=/";
+            document.cookie = "lastCourse=math101; expires=Fri, 31 Dec 2026 23:59:59 UTC; path=/";
+            alert("Cookies créés !");
+        }
+
+        // Fonction pour lire les cookies
+        function readCookies() {
+            let cookies = document.cookie;
+            document.getElementById("message").textContent = "Cookies: " + cookies;
+        }
+
+        // Fonction pour modifier un cookie
+        function updateCookie() {
+            document.cookie = "language=en; expires=Fri, 31 Dec 2026 23:59:59 UTC; path=/";
+            alert("Cookie modifié : langue changée en anglais !");
+        }
+
+        // Fonction pour supprimer des cookies
+        function deleteCookie() {
+            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            document.cookie = "language=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            document.cookie = "isLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            document.cookie = "lastCourse=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            alert("Cookies supprimés !");
+        }
+    </script>
+</body>
+</html>
